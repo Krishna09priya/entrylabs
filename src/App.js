@@ -9,12 +9,12 @@ function App() {
 
   const handleSubmit =(e)=>{
     e.preventDefault();
-    const trimmedCity = city.trim().toLowerCase();
+    const trimmedCity = city?.trim()?.toLowerCase();
     if(!trimmedCity){
       setError('City name is required');
       return;
     }
-    if(cities.includes(trimmedCity)){
+    if(cities?.includes(trimmedCity)){
       setError('City name already exists');
       return;
     }
